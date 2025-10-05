@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+#body-container {
+    background-color: #dbd8d8;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: cover;
+    background-image: url("../assets/nc-root-1.png");
+}
+#in3p {
+    min-height: 106px;
+    background-repeat: unset;
+    background-position: unset;
+    background-attachment: unset;
+    background-size: unset;
+    background-image: unset;
+    background-image-color: unset;
+    background-image-gradient: unset;
+    background-image-gradient-dir: unset;
+    background-image-gradient-type: unset;
+    display: flex;
+}
+#in21l {
+    min-height: 100px;
+    background-color: #6a5e5e;
+    border-left: 0px solid;
+}
+#iycwl {
+    min-height: 100px;
+    border: 20px none;
+    border-left: 0px solid;
+}
+#iplf7 {
+    padding: 10px;
+    font-family: Helvetica, sans-serif;
+    font-size: 56px;
+    color: #211c1c;
+    border: 2px solid;
+    text-decoration: #000000;
+    border-left: 16px solid;
+}
