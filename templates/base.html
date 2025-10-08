@@ -1,50 +1,40 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="stylesheet"
+            href="{{ get_url(path='nc-root.css') }}"
+        />
 
-<head>
-  <meta charset="utf-8">
-  <title>Notre Coin</title>
-  <link rel="stylesheet" href="{{ get_url(path='nc-root.css') }}">
-  <script src=""{{ get_url(path='htmx.min.js') }}"></script>
-</head>
-
-<body>
-  <div class="body-container">
-    <div class="topbar-container">
-      {% if lang=="en" %}
-      <div class="logo-container">
-        <div><a href="{{ get_url(path='', lang='en') }}"><img src="{{ get_url(path='faircolibri-logo-text-small.png') }}" width="100"></a></div>
-        <div>
-          <button hx-get="{{ get_url(path='@/blog/_index.md', lang='en') }}" hx-swap="outerHTML">
-            Blog
-          </button></div>
-      </div>
-      
-      <div class="menu-container">
-
-        <div><a href="{{ get_url(path='@/liens/_index.md', lang='en') }}">Links</a></div>
-        <div><a href="{{ get_url(path='@/about/_index.md', lang='en') }}">About</a></div>
-        <div><a href="{{ get_url(path='', lang='fr') }}">Fr</a></div>
-      </div>
-      {% else %}
-      <div class="logo-container">
-        <div><a href="{{ get_url(path='', lang='fr') }}"><img src="{{ get_url(path='faircolibri-logo-text-small.png') }}" width="100"></a></div>
-      </div>
-      <div class="menu-container">
-        <div><a href="{{ get_url(path='@/blog/_index.md', lang='fr') }}">Petit blog</a></div>
-        <div><a href="{{ get_url(path='@/liens/_index.md', lang='fr') }}">Liens</a></div>
-        <div><a href="{{ get_url(path='@/about/_index.md', lang='fr') }}">A propos</a></div>
-        <div><a href="{{ get_url(path='', lang='en') }}">En</a></div>
-      </div>
-      {% endif %}
-    </div>
-
-    <section class="section-container">
-      <div>
-        {% block content %} {% endblock content %}
-      </div>
-    </section>
-  </div>
-</body>
-
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css?family=Akatab&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body id="nc-body">
+        <div id="nc-page">
+            <div id="nc-top-bar">
+                <div id="nc-logo-container">
+                    <img id="nc-logo-chat" src="{{ get_url(path='11.jpg') }}" />
+                </div>
+                <div id="nc-menu-bar">
+                    <div id="nc-menu-texte">NOTRE COIN</div>
+                    <div id="nc-menu-container">
+                        <div id="nc-menu-item"><b id="icwh7">MENU 1</b></div>
+                        <div id="nc-menu-item-3"><b id="il48f">MENU 2</b></div>
+                        <div id="nc-menu-item-2"><b id="inbqw">MENU 3</b></div>
+                    </div>
+                </div>
+            </div>
+            <div id="nc-display">
+                <div id="nc-content">{% block content %} {% endblock content %}</div></div>
+                <div id="nc-bottom-bar-2">
+                    <div id="nc-bottom-text">Colofon</div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
