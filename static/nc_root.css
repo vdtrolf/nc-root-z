@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#nc-body {
+    background-attachment: scroll;
+    background-image: url("nc-back-top.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#nc-page {
+    align-content: center;
+    border: 0px solid;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+}
+
+#nc-top-bar {
+    background-attachment: unset;
+    background-image: unset;
+    background-image-color: unset;
+    background-image-gradient: unset;
+    background-image-gradient-dir: unset;
+    background-image-gradient-type: unset;
+    background-position: unset;
+    background-repeat: unset;
+    background-size: unset;
+    border: 0px solid;
+    display: flex;
+    flex-direction: row;
+    min-height: 163px;
+    opacity: 0.53;
+    order: 1;
+}
+
+#nc-logo-chat {
+    background-attachment: unset;
+    background-image: unset;
+    background-image-color: unset;
+    background-image-gradient: unset;
+    background-image-gradient-dir: unset;
+    background-image-gradient-type: unset;
+    background-position: unset;
+    background-repeat: unset;
+    background-size: unset;
+    color: black;
+    display: none;
+    max-height: 95px;
+    max-width: 60px;
+    min-width: 100%;
+    object-fit: inherit;
+}
+
+#nc-menu-bar {
+    align-content: flex-end;
+    background-attachment: unset;
+    background-image: unset;
+    background-image-color: unset;
+    background-image-gradient: unset;
+    background-image-gradient-dir: unset;
+    background-image-gradient-type: unset;
+    background-position: unset;
+    background-repeat: unset;
+    background-size: unset;
+    display: flex;
+    justify-content: space-between;
+    min-width: 92%;
+}
+
+#nc-middle-tex {
+    align-self: flex-start;
+    color: #000000;
+    font-family:
+        Arial Black,
+        Gadget,
+        sans-serif;
+    font-size: 28px;
+    padding: 52px 10px 10px 10px;
+}
+
+#nc-display-top {
+    align-content: space-around;
+    align-items: stretch;
+    border: 0px solid;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 1200px;
+    order: 2;
+    visibility: visible;
+}
+
+#nc-bottom-bar-2 {
+    background-attachment: scroll;
+    background-image: linear-gradient(to right, #fff6f6 0%, #735e5e 100%);
+    background-position: left top;
+    background-repeat: repeat;
+    background-size: auto;
+    display: flex;
+    height: 100px;
+    order: 4;
+}
+
+#nc-bottom-text {
+    font-family:
+        Arial Black,
+        Gadget,
+        sans-serif;
+    padding: 10px;
+}
+
+#nc-content-bloc {
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 14px 14px 14px 14px;
+    margin: 20px;
+    min-height: 300px;
+    min-width: 30%;
+    width: 300px;
+}
+
+#nc-logo-container {
+    min-width: 8%;
+}
+
+#nc-display-middle {
+    align-content: flex-start;
+    background-attachment: scroll;
+    background-image: none;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border: 0px solid;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 1200px;
+    min-height: 600px;
+    order: 4;
+    visibility: visible;
+}
+
+#nc-logo-chat-2 {
+    background-attachment: unset;
+    background-image: unset;
+    background-image-color: unset;
+    background-image-gradient: unset;
+    background-image-gradient-dir: unset;
+    background-image-gradient-type: unset;
+    background-position: unset;
+    background-repeat: unset;
+    background-size: unset;
+    color: black;
+    display: none;
+    max-height: 95px;
+    max-width: 60px;
+    min-width: 100%;
+    object-fit: inherit;
+}
+
+#nc-spaccer {
+    min-width: 8%;
+}
+
+#nc-middle-container {
+    align-content: flex-start;
+    background-attachment: unset;
+    background-image: unset;
+    background-image-color: unset;
+    background-image-gradient: unset;
+    background-image-gradient-dir: unset;
+    background-image-gradient-type: unset;
+    background-position: unset;
+    background-repeat: unset;
+    background-size: unset;
+    display: flex;
+    justify-content: space-between;
+    min-width: 92%;
+}
+
+#nc-middle-bar {
+    background-attachment: scroll;
+    background-image: url("nc-back-middle.png");
+    background-image-color: unset;
+    background-image-gradient: unset;
+    background-image-gradient-dir: unset;
+    background-image-gradient-type: unset;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border: 0px solid;
+    display: flex;
+    flex-direction: row;
+    min-height: 137px;
+    opacity: 0.53;
+    order: 3;
+}
+
+#nc-content-bloc-2 {
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 14px 14px 14px 14px;
+    margin: 20px;
+    min-height: 300px;
+    min-width: 30%;
+    width: 300px;
+}
+
+#nc-content-bloc-2-2 {
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 14px 14px 14px 14px;
+    margin: 20px;
+    min-height: 300px;
+    min-width: 30%;
+    width: 300px;
+}
+
+#nc-content-bloc-2-3 {
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 14px 14px 14px 14px;
+    margin: 20px;
+    min-height: 300px;
+    min-width: 30%;
+    width: 300px;
+}
+
+#nc-content-bloc-2-4 {
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 14px 14px 14px 14px;
+    margin: 20px;
+    min-height: 300px;
+    min-width: 30%;
+    width: 300px;
+}
+
+#nc-menu-entry-2 {
+    align-self: flex-start;
+    color: #000000;
+    font-family:
+        Arial Black,
+        Gadget,
+        sans-serif;
+    font-size: 20px;
+    padding: 0px 10px 10px 10px;
+}
+
+#menu-container {
+    display: flex;
+    min-height: 100px;
+    order: 0;
+}
+
+#nc-content-bloc-3 {
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 14px 14px 14px 14px;
+    margin: 20px;
+    min-height: 300px;
+    min-width: 30%;
+    width: 300px;
+}
+
+#nc-content-bloc-4 {
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 14px 14px 14px 14px;
+    margin: 20px;
+    min-height: 300px;
+    min-width: 30%;
+    width: 300px;
+}
+
+#nc-content-bloc-5 {
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 14px 14px 14px 14px;
+    margin: 20px;
+    min-height: 300px;
+    min-width: 30%;
+    width: 300px;
+}
+
+#nc-name-texte {
+    font-family:
+        Arial Black,
+        Gadget,
+        sans-serif;
+    font-size: 34px;
+}
+
+#nc-menu-entry-1 {
+    font-family:
+        Arial Black,
+        Gadget,
+        sans-serif;
+    font-size: 20px;
+}
+
+#nc-menu-entry-3 {
+    font-family:
+        Arial Black,
+        Gadget,
+        sans-serif;
+    font-size: 20px;
+}
+
+@media (max-width: 992px) {
+    #nc-logo-container {
+        min-height: 95px;
+        min-width: 8%;
+    }
+
+    #nc-menu-bar {
+        min-height: 95px;
+    }
+
+    #nc-spaccer {
+        min-height: 95px;
+        min-width: 8%;
+    }
+
+    #nc-middle-container {
+        min-height: 95px;
+    }
+}
