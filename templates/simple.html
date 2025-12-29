@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
 
-{% for page in section.pages %}
-{{ page.content | safe }}
-{% endfor %}
-
+<div id="nc-display-top">
+  <div id="nc-bloc-top">
+  {% for page in section.pages %}
+  {{ page.content | safe }}
+  {% endfor %}
+  </div>
+</div>	
 {% endblock content %}
