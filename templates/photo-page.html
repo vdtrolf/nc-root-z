@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="nc-display-top">
+  <div id="nc-middle-title">LA PHOTO DE LA SEMAINE</div>
+  <div id="nc-bloc-top">
+      <div id="nc-bloc-top-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></div>
+      <p><img id="nc-logo-livre" src="{{ get_url(path=page.extra.image) }}" /></p>
+      <p>{{ page.description | safe}}</p>
+  </div>
+</div>
+
+{% endblock content %}

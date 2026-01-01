@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="nc-display-top">
+    <p></p>
+    <p></p>
+    <div id="nc-bloc-top-flex">
+      {% for page in section.pages %}
+        <div id="nc-content-bloc">
+          <div id="nc-bloc-top">
+            <div id="nc-bloc-top-title"><a href="{{ page.extra.link | safe }}">{{ page.title }}</a></div>
+            <p>{{ page.content | safe}}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+</div>
+{% endblock content %}

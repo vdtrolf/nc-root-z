@@ -41,7 +41,7 @@ a {
     border: 0px solid;
     display: flex;
     flex-direction: row;
-    min-height: 163px;
+    min-height: 120px;
     opacity: 0.53;
     order: 1;
 }
@@ -80,23 +80,26 @@ a {
     min-width: 92%;
 }
 
-#nc-middle-tex {
+#nc-middle-title {
     align-self: flex-start;
-    color: #000000;
-    font-family:
-        Arial Black,
-        Gadget,
-        sans-serif;
+    color: #456882;
+    font-family: Arial, Gadget, sans-serif;
     font-size: 28px;
-    padding: 52px 10px 10px 10px;
+    padding: 56px 0px 0px 20px;
+}
+
+#nc-middle-text {
+    color: #234c6a;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 18px;
+    padding: 10px 0px 0px 20px;
 }
 
 #nc-display-top {
-    align-content: space-around;
-    align-items: stretch;
+    display: flex;
     border: 0px solid;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 0;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -106,7 +109,34 @@ a {
 }
 
 #nc-bloc-top {
-    padding: 0px 0px 20px 0px;
+    font-family: Arial, Gadget, sans-serif;
+    padding: 20px;
+    font-size: 16px;
+}
+
+#nc-bloc-top-flex {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-grow: 0;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 16px;
+}
+
+#nc-bloc-pic {
+    max-height: 300px;
+    margin: 20px;
+}
+
+#nc-bloc-text {
+    margin: 0px;
+}
+
+#nc-bloc-top-title {
+    color: #234c6a;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 #nc-bottom-bar-2 {
@@ -121,21 +151,20 @@ a {
 }
 
 #nc-bottom-text {
-    font-family:
-        Arial Black,
-        Gadget,
-        sans-serif;
-    padding: 10px;
+    color: #456882;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 14px;
+    padding: 10px 0px 0px 20px;
 }
 
 #nc-content-bloc {
-    background-color: #ffffff;
-    border: 5px solid #000000;
+    background-color: #e3e3e3;
+    border: 3px solid #456882;
     border-radius: 14px 14px 14px 14px;
     margin: 20px;
     min-height: 300px;
     min-width: 30%;
-    width: 300px;
+    width: 200px;
 }
 
 #nc-logo-container {
@@ -222,6 +251,13 @@ a {
         Gadget,
         sans-serif;
     font-size: 34px;
+}
+
+.resizable-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
 }
 
 @media (max-width: 992px) {

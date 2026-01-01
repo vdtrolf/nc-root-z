@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div id="nc-display-top">
+  <div id="nc-middle-title">LA PHOTO DE LA SEMAINE</div>
+  <div id="nc-bloc-top">
+  {% for page in section.pages %}
+    {% if loop.first  %}
+        <div id="nc-bloc-top-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></div>
+        <p><img id="nc-logo-livre" src="{{ get_url(path=page.extra.image) }}" /></p>
+        <p>{{ page.description | safe}}</p>
+    {% endif %}
+  {% endfor %}
+  </div>
+</div>
+
+<div id="nc-middle-bar">
+  <div id="nc-spaccer">
+    <img id="nc-logo-chat" src="{{ get_url(path='11.jpg') }}"/></div>
+    <div id="nc-middle-container">
+      <div id="nc-middle-title">LES AUTRES PHOTOS</div>
+    </div>
+  </div>
+  <div id="nc-display-middle">
+
+  <!-- If you are using pagination, section.pages will be empty.
+       You need to use the paginator object -->
+
+  {% for page in section.pages %}
+    {% if not loop.first  %}
+    <div id="nc-content-bloc">
+      <div id="nc-bloc-top">
+        <div id="nc-bloc-top-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></div>
+        <p>{{ page.description | safe}}</p>
+        <p><img src="{{ get_url(path=page.extra.image) }}" class="resizable-image"/></p>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+
+  </div>
+{% endblock content %}

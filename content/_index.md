@@ -1,7 +1,7 @@
 +++
 title = ""
-sort_by = "date"
-template = "simple.html"
+sort_by = "weight"
+template = "simple_list.html"
 weight = 1
 +++
 Home page

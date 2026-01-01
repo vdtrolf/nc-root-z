@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="nc-display-top">
+  <div id="nc-middle-title">LE PETIT LIVRE DE LA SEMAINE</div>
+  <div id="nc-middle-text">
+      {{ page.extra.week | safe }}
+      <div id="nc-bloc-top-title">{{ page.title | safe }}</div>
+      {{ page.extra.info | safe }}
+  </div>
+  <div id="nc-bloc-top-flex">
+      <div id="nc-bloc-pic"><img id="nc-logo-livre" src="{{ get_url(path=page.extra.image) }}" /></div>
+      <div id="nc-bloc-text">
+       <p>{{ page.content | safe }}</p>
+       <p></p>
+       <p><div id="nc-bloc-top-title"><a href="{{ page.extra.babelio | safe }}">BABELIO</a> (un site de lecteurs)</div></p>
+       <p><div id="nc-bloc-top-title"><a href="{{ page.extra.mollat | safe }}">ACHETER</a> (chez un vrai libraire: Mollat à Bordeaux)</div></p>
+      </div>
+   </div>
+</div>
+
+{% endblock content %}

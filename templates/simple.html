@@ -3,10 +3,11 @@
 {% block content %}
 
 <div id="nc-display-top">
-  <div id="nc-bloc-top">
-  {% for page in section.pages %}
-  {{ page.content | safe }}
-  {% endfor %}
-  </div>
-</div>	
+      {% for page in section.pages %}
+          <div id="nc-bloc-top">
+            <div id="nc-bloc-top-title">{{ page.title }}</div>
+            <p>{{ page.content | safe}}</p>
+          </div>
+      {% endfor %}
+</div>
 {% endblock content %}
