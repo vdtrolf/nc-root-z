@@ -2,10 +2,13 @@
 
 {% block content %}
 
+{% set max_index = section.extra.max_index %}
+{% set other_section = get_section(path="books/_index.md") %}
+
 <div id="nc-display-top">
   <div id="nc-middle-title">LE PETIT LIVRE DE LA SEMAINE</div>
 
-  {% for page in section.pages %}
+  {% for page in other_section.pages %}
     {% if loop.first  %}
     <div id="nc-middle-text">
       {{ page.extra.week | safe }}
@@ -24,29 +27,33 @@
 </div>
 
 <div id="nc-middle-bar">
-  <div id="nc-spaccer">
-    <img id="nc-logo-chat" src="{{ get_url(path='11.jpg') }}"/></div>
-    <div id="nc-middle-container">
-      <div id="nc-middle-title">LIVRES D'AVANT</div>
-    </div>
+  <div id="nc-spaccer"></div>
+  <div id="nc-middle-container">
+    <div id="nc-middle-title">LIVRES D'AVANT</div>
   </div>
-  <div id="nc-display-middle">
+</div>
+<div id="nc-display-middle">
 
-  <!-- If you are using pagination, section.pages will be empty.
-       You need to use the paginator object -->
-
-  {% for page in section.pages %}
-    {% if not loop.first  %}
-    <div id="nc-content-bloc">
-      <div id="nc-bloc-top">
-        <p>{{ page.extra.week | safe }}</p>
-        <div id="nc-bloc-top-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></div>
-        <p>{{ page.description | safe}}</p>
-        <p><img id="nc-logo-livre" src="{{ get_url(path=page.extra.image) }}" /></p>
+  {% for page in other_section.pages %}
+    {% if not loop.first and loop.index < max_index %}
+      <div id="nc-content-bloc">
+        <div id="nc-bloc-top">
+          <div>{{ page.extra.week | safe }}</div>
+          <div id="nc-bloc-top-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></div>
+          <p></p>
+          <div id="nc-bloc-top-flex">
+            <div><img id="nc-logo-livre" src="{{ get_url(path=page.extra.image) }}" height="150" /></div>
+            <div>&nbsp;</div>
+            <div>{{ page.description | safe}}</div>
+          </div>
+         </div>
       </div>
-    </div>
     {% endif %}
   {% endfor %}
+
+  {% if max_index < 99 %}
+      <div id="nc-content-button"><a href="{{ get_url(path='@/allbooks/_index.md', lang="en" ) }}">Tous les livres</a></div>
+  {% endif %}
 
   </div>
 {% endblock content %}

@@ -46,24 +46,6 @@ a {
     order: 1;
 }
 
-#nc-logo-chat {
-    background-attachment: unset;
-    background-image: unset;
-    background-image-color: unset;
-    background-image-gradient: unset;
-    background-image-gradient-dir: unset;
-    background-image-gradient-type: unset;
-    background-position: unset;
-    background-repeat: unset;
-    background-size: unset;
-    color: black;
-    display: none;
-    max-height: 95px;
-    max-width: 60px;
-    min-width: 100%;
-    object-fit: inherit;
-}
-
 #nc-menu-bar {
     align-content: flex-end;
     background-attachment: unset;
@@ -78,6 +60,7 @@ a {
     display: flex;
     justify-content: space-between;
     min-width: 92%;
+    padding: 0px 0px 0px 80px;
 }
 
 #nc-middle-title {
@@ -139,13 +122,15 @@ a {
     font-weight: bold;
 }
 
-#nc-bottom-bar-2 {
+#nc-bottom-bar {
     background-attachment: scroll;
     background-image: linear-gradient(to right, #fff6f6 0%, #735e5e 100%);
     background-position: left top;
     background-repeat: repeat;
     background-size: auto;
     display: flex;
+    align-content: flex-start;
+    flex-direction: column;
     height: 100px;
     order: 4;
 }
@@ -153,8 +138,8 @@ a {
 #nc-bottom-text {
     color: #456882;
     font-family: Arial, Gadget, sans-serif;
-    font-size: 14px;
-    padding: 10px 0px 0px 20px;
+    font-size: 16px;
+    padding: 20px 0px 0px 20px;
 }
 
 #nc-content-bloc {
@@ -165,6 +150,20 @@ a {
     min-height: 300px;
     min-width: 30%;
     width: 200px;
+}
+
+#nc-content-button {
+    background-color: #456882;
+    border: 2px solid #e3e3e3;
+    border-radius: 8px 8px 8px 8px;
+    margin: 20px;
+    min-height: 10px;
+    width: 200px;
+    color: #ffffff;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 2px 15px 15px;
 }
 
 #nc-logo-container {

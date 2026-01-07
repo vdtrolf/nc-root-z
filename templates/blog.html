@@ -14,7 +14,6 @@
 
 <div id="nc-middle-bar">
   <div id="nc-spaccer">
-    <img id="nc-logo-chat" src="{{ get_url(path='11.jpg') }}"/></div>
     <div id="nc-middle-container">
       <div id="nc-middle-tex">LIVRES</div>
     </div>
@@ -22,7 +21,7 @@
   <div id="nc-display-middle">
     <ul>
   <!-- If you are using pagination, section.pages will be empty.
-       You need to use the paginator object -->  
+       You need to use the paginator object -->
      <div class="blog-container">
   {% for page in section.pages %}
        <div><a href="{{ page.permalink | safe }}">{{ page.title }}</a>

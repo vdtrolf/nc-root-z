@@ -1,5 +1,6 @@
 # The URL the site will be built for
 base_url = "https://www.notrecoin.nl"
+title = "tata"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -20,3 +21,4 @@ highlight_code = false
 
 [extra]
 # Put all your custom variables here
+max_index=8

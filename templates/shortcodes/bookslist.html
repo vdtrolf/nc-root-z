@@ -1,0 +1,16 @@
+  {% for page in section.pages %}
+    {% if not loop.first and loop.index < max_index %}
+    <div id="nc-content-bloc">
+      <div id="nc-bloc-top">
+        <div>{{ page.extra.week | safe }} - {{ loop.index }} / {{ max_index }}</div>
+        <div id="nc-bloc-top-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></div>
+        <p></p>
+        <div id="nc-bloc-top-flex">
+          <div><img id="nc-logo-livre" src="{{ get_url(path=page.extra.image) }}" height="150" /></div>
+          <div>&nbsp;</div>
+          <div>{{ page.description | safe}}</div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
