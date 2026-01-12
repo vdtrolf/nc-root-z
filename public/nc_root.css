@@ -132,7 +132,7 @@ a {
     align-content: flex-start;
     flex-direction: column;
     height: 100px;
-    order: 4;
+    order: 6;
 }
 
 #nc-bottom-text {
@@ -144,26 +144,33 @@ a {
 
 #nc-content-bloc {
     background-color: #edf2f3;
-    border: 2px solid #1f3541;
+    border: 2px solid #5289b5;
     border-radius: 12px 12px 12px 12px;
-    margin: 20px;
+    margin: 10px;
     min-height: 300px;
     min-width: 30%;
     width: 200px;
 }
 
 #nc-content-button {
-    background-color: #1f3541;
+    background-color: #5289b5;
     border: 2px solid #edf2f3;
     border-radius: 8px 8px 8px 8px;
-    margin: 20px;
-    min-height: 10px;
+    margin: 10px;
     width: 200px;
     color: #ffffff;
     font-family: Arial, Gadget, sans-serif;
     font-size: 24px;
     font-weight: bold;
-    padding: 8px 2px 15px 15px;
+    padding: 10px 2px 15px 15px;
+}
+
+#nc-content-button > a:visited {
+    color: #ffffff;
+}
+
+#nc-content-button > a:hover {
+    color: #afd8f2;
 }
 
 #nc-logo-container {
@@ -186,6 +193,18 @@ a {
     max-width: 1200px;
     min-height: 600px;
     order: 4;
+    visibility: visible;
+}
+
+#nc-buttons-middle {
+    align-content: flex-start;
+    border: 0px solid;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    order: 5;
     visibility: visible;
 }
 
@@ -229,13 +248,19 @@ a {
 
 #nc-menu-entry {
     align-self: flex-start;
-    color: #000000;
-    font-family:
-        Arial Black,
-        Gadget,
-        sans-serif;
+    color: #1f3541;
+    font-family: Arial, Gadget, sans-serif;
     font-size: 20px;
     padding: 0px 10px 10px 10px;
+}
+
+#nc-menu-entry > a:visited {
+    color: #1f3541;
+}
+
+#nc-menu-entry > a:hover {
+    color: #1f3541;
+    border-bottom: 4px solid #1f3541;
 }
 
 #menu-container {
@@ -245,11 +270,18 @@ a {
 }
 
 #nc-name-texte {
-    font-family:
-        Arial Black,
-        Gadget,
-        sans-serif;
+    color: #1f3541;
+    font-family: Arial, Gadget, sans-serif;
     font-size: 34px;
+}
+
+#nc-name-texte > a:visited {
+    color: #1f3541;
+}
+
+#nc-name-texte > a:hover {
+    color: #1f3541;
+    border-bottom: 4px solid #1f3541;
 }
 
 .resizable-image {

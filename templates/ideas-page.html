@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="nc-display-top">
+  <div id="nc-middle-title">UNE IDEE</div>
+  <div id="nc-middle-text">
+      <div id="nc-bloc-top-title">{{ page.title | safe }}</div>
+      {{ page.description | safe }}
+
+       <p>{{ page.content | safe }}</p>
+       <p></p>
+       <p><div id="nc-bloc-top-title"><a href="{{ page.extra.lien | safe }}">Source</a></div></p>
+   </div>
+</div>
+
+{% endblock content %}

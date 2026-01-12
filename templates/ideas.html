@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% set max_index = section.extra.max_index %}
+
+<div id="nc-display-top">
+  <div id="nc-middle-title">UNE IDEE RECENTE</div>
+
+  {% for page in section.pages %}
+    {% if loop.first  %}
+    <div id="nc-middle-text">
+      <div id="nc-bloc-top-title"><a href="{{ page.permalink | safe }}">{{ page.title | safe }}</a></div>
+      <div>{{ page.description | safe}}</div>
+       <p>{{ page.content | safe }}</p>
+    </div>
+    {% endif %}
+  {% endfor %}
+
+</div>
+
+<div id="nc-middle-bar">
+  <div id="nc-spaccer"></div>
+  <div id="nc-middle-container">
+    <div id="nc-middle-title">AUTRES IDEES</div>
+  </div>
+</div>
+<div id="nc-display-middle">
+
+  {% for page in section.pages %}
+    {% if not loop.first and loop.index < max_index %}
+      <div id="nc-content-bloc">
+        <div id="nc-bloc-top">
+          <div id="nc-bloc-top-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></div>
+          <p></p>
+          <div id="nc-bloc-top-flex">
+            <div>&nbsp;</div>
+            <div>{{ page.description | safe}}</div>
+          </div>
+         </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  </div>
+
+  {% if max_index < 99 %}
+  <div id='nc-buttons-middle'>
+      <div id="nc-content-button"><a href="{{ get_url(path='@/allbooks/_index.md', lang="en" ) }}">Plus d'idées</a></div>
+  </div>
+  {% endif %}
+
+{% endblock content %}

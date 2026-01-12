@@ -42,7 +42,7 @@
           <div id="nc-bloc-top-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></div>
           <p></p>
           <div id="nc-bloc-top-flex">
-            <div><img id="nc-logo-livre" src="{{ get_url(path=page.extra.image) }}" height="150" /></div>
+            <div><a href="{{ page.permalink | safe }}"><img id="nc-logo-livre" src="{{ get_url(path=page.extra.image) }}" height="150" /></a></div>
             <div>&nbsp;</div>
             <div>{{ page.description | safe}}</div>
           </div>
@@ -51,9 +51,12 @@
     {% endif %}
   {% endfor %}
 
+  </div>
+
   {% if max_index < 99 %}
+  <div id='nc-buttons-middle'>
       <div id="nc-content-button"><a href="{{ get_url(path='@/allbooks/_index.md', lang="en" ) }}">Tous les livres</a></div>
+  </div>
   {% endif %}
 
-  </div>
 {% endblock content %}
