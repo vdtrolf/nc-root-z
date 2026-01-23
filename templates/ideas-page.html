@@ -3,14 +3,15 @@
 {% block content %}
 
 <div id="nc-display-top">
-  <div id="nc-middle-title">UNE IDEE</div>
-  <div id="nc-middle-text">
-      <div id="nc-bloc-top-title">{{ page.title | safe }}</div>
-      {{ page.description | safe }}
-
+  <div id="nc-middle-title">IDEE: {{ page.title | safe }}</div>
+  <p></p>
+  <div id="nc-bloc-top-flex">
+      <div id="nc-bloc-pic"><img id="nc-logo-livre" src="{{ get_url(path=page.extra.image) }}" /></div>
+      <div id="nc-bloc-text">
        <p>{{ page.content | safe }}</p>
        <p></p>
-       <p><div id="nc-bloc-top-title"><a href="{{ page.extra.lien | safe }}">Source</a></div></p>
+       <p><div id="nc-bloc-top-title"><a href="{{ page.extra.lien | safe }}">Source : {{ page.extra.descr_lien | safe }}</a></div></p>
+      </div>
    </div>
 </div>
 
