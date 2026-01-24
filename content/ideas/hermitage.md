@@ -1,5 +1,5 @@
 +++
-title = "L’Hermitage : un lieu unique en son genre"
+title = "L’Hermitage, un lieu unique en son genre"
 description="Campus 3zéro : zéro exclusion, zéro carbone et zéro pauvreté"
 date = 2026-01-10
 in_search_index = true
