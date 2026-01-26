@@ -42,6 +42,7 @@ a {
     display: flex;
     flex-direction: row;
     min-height: 120px;
+    max-width: 1000px;
     opacity: 0.53;
     order: 1;
 }
@@ -60,7 +61,7 @@ a {
     display: flex;
     justify-content: space-between;
     min-width: 92%;
-    padding: 0px 0px 0px 80px;
+    padding: 5px 0px 0px 50px;
 }
 
 #nc-middle-title {
@@ -68,14 +69,16 @@ a {
     color: #456882;
     font-family: Arial, Gadget, sans-serif;
     font-size: 28px;
-    padding: 56px 0px 0px 20px;
+    font-size: clamp(18px, 2vw, 28px);
+    padding: 56px 0px 0px 2%;
 }
 
 #nc-middle-text {
     color: #234c6a;
     font-family: Arial, Gadget, sans-serif;
     font-size: 18px;
-    padding: 10px 0px 0px 20px;
+    font-size: clamp(12px, 2vw, 18px);
+    padding: 10px 0px 0px 2%;
 }
 
 #nc-display-top {
@@ -86,52 +89,103 @@ a {
     flex-grow: 0;
     flex-wrap: wrap;
     justify-content: flex-start;
-    max-width: 1200px;
+    max-width: 1000px;
     order: 2;
     visibility: visible;
 }
 
 #nc-bloc-top {
     font-family: Arial, Gadget, sans-serif;
-    padding: 20px;
+    padding: 2%;
     font-size: 16px;
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+#nc-bloc-top img {
+    max-width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    flex: 1 1 auto;
+    /* Allow images to grow and shrink */
+    object-fit: cover;
 }
 
 #nc-bloc-top-flex {
     display: flex;
     align-content: flex-start;
     flex-direction: row;
-    flex-grow: 0;
     font-family: Arial, Gadget, sans-serif;
     font-size: 16px;
+    font-size: clamp(12px, 2vw, 16px);
+    padding: 10px 0px 0px 2%;
+}
+
+#nc-bloc-top-flex img {
+    max-width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    flex: 1 1 auto;
+    /* Allow images to grow and shrink */
+    object-fit: cover;
+}
+
+#nc-bloc-content-flex {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 16px;
+    font-size: clamp(12px, 2vw, 16px);
+    padding: 10px 0px 0px 0px;
+}
+
+#nc-bloc-conten-flex img {
+    max-width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    flex: 1 1 auto;
+    /* Allow images to grow and shrink */
+    object-fit: cover;
 }
 
 #nc-bloc-pic {
-    max-height: 300px;
-    margin: 20px;
+    width: 20%;
 }
 
 #nc-bloc-text {
-    margin: 0px;
+    width: 80%;
+    padding: 0px 0px 0px 2%;
+}
+
+#nc-img-big {
+    max-height: 300px;
+}
+
+#nc-img-small {
+    max-height: 140px;
 }
 
 #nc-bloc-top-title {
     color: #234c6a;
     font-family: Arial, Gadget, sans-serif;
     font-size: 18px;
+    font-size: clamp(12px, 2vw, 18px);
     font-weight: bold;
+    padding: 10px 0px 0px 0px;
 }
 
 #nc-bottom-bar {
     background-attachment: scroll;
-    background-image: linear-gradient(to right, #fff6f6 0%, #735e5e 100%);
+    background-image: linear-gradient(to left, #ffffff 0%, #c3bbb2 100%);
     background-position: left top;
     background-repeat: repeat;
     background-size: auto;
     display: flex;
     align-content: flex-start;
     flex-direction: column;
-    height: 100px;
+    margin-top: 10px;
+    height: 60px;
+    max-width: 1000px;
     order: 6;
 }
 
@@ -139,30 +193,44 @@ a {
     color: #456882;
     font-family: Arial, Gadget, sans-serif;
     font-size: 16px;
-    padding: 20px 0px 0px 20px;
+    font-size: clamp(12px, 2vw, 16px);
+    padding: 10px 0% 0% 2%;
 }
 
 #nc-content-bloc {
     background-color: #edf2f3;
     border: 2px solid #5289b5;
     border-radius: 12px 12px 12px 12px;
-    margin: 10px;
+    margin: 1%;
     min-height: 300px;
-    min-width: 30%;
-    width: 200px;
+    min-width: 150px;
+    width: 30%;
+}
+
+#nc-content-bloc-photos {
+    background-color: #edf2f3;
+    border: 2px solid #5289b5;
+    border-radius: 12px 12px 12px 12px;
+    content-align: left;
+    margin: 1%;
+    min-height: 300px;
+    min-width: 300px;
+    width: 30%;
 }
 
 #nc-content-button {
     background-color: #5289b5;
     border: 2px solid #edf2f3;
     border-radius: 8px 8px 8px 8px;
-    margin: 10px;
-    width: 200px;
+    width: 25%;
+    max-width: 300px;
+    max-height: 50px;
     color: #ffffff;
     font-family: Arial, Gadget, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
+    font-size: clamp(12px, 2vw, 20px);
     font-weight: bold;
-    padding: 10px 2px 15px 15px;
+    padding: 1% 0% 1.5% 1.5%;
 }
 
 #nc-content-button > a:visited {
@@ -190,10 +258,11 @@ a {
     flex-grow: 0;
     flex-wrap: wrap;
     justify-content: flex-start;
-    max-width: 1200px;
+    max-width: 1000px;
     min-height: 600px;
     order: 4;
     visibility: visible;
+    padding: 0px 0px 0px 1%;
 }
 
 #nc-buttons-middle {
@@ -206,6 +275,7 @@ a {
     justify-content: flex-start;
     order: 5;
     visibility: visible;
+    padding: 0px 0px 0px 1.5%;
 }
 
 #nc-spaccer {
@@ -251,6 +321,7 @@ a {
     color: #1f3541;
     font-family: Arial, Gadget, sans-serif;
     font-size: 20px;
+    font-size: clamp(14px, 2vw, 20px);
     padding: 0px 10px 10px 10px;
 }
 
@@ -273,6 +344,7 @@ a {
     color: #1f3541;
     font-family: Arial, Gadget, sans-serif;
     font-size: 34px;
+    font-size: clamp(20px, 2vw, 34px);
 }
 
 #nc-name-texte > a:visited {
@@ -285,8 +357,8 @@ a {
 }
 
 .resizable-image {
-    max-width: 100%;
-    max-height: 100%;
+    width: auto;
+    height: auto;
     display: block;
     margin: auto;
 }
