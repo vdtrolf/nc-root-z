@@ -1,6 +1,6 @@
 +++
 title = "Dans la lande à Ermelo"
-description = "Le crépuscule sur la longère"
+description = "Aux Pays-Bas ou dans la savane ?"
 date = 2025-01-25
 weight = 4
 [extra]
