@@ -4,8 +4,8 @@
 
 <div id="nc-display-top">
       {% for page in section.pages %}
+          <div id="nc-middle-title">{{ page.title }}</div>
           <div id="nc-bloc-top">
-            <div id="nc-bloc-top-title">{{ page.title }}</div>
             <p>{{ page.content | safe}}</p>
           </div>
       {% endfor %}
