@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# This is a bash script to rebuild and deplopy notrecoin content
-cd /home/rolf/repos/zola/nc-root-z
-zola build
+# This is a bash script to deplopy notrecoin content
 cd ./public
 cp -r * /var/www/html
 systemctl stop nginx
